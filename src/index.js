@@ -1,5 +1,6 @@
 import './style.css';
 import { populateHome } from './home';
+import { populateMenu } from './menu';
 
 class navController {
 
@@ -20,6 +21,7 @@ class navController {
     this.menu.addEventListener("click", () => {
       this.clearContent();
       console.log("menu button pressed");
+      populateMenu();
     });
 
     this.about.addEventListener("click", () => {
@@ -35,3 +37,4 @@ class navController {
 
 const controller = new navController();
 controller.initializeEventHandlers();
+populateHome();
