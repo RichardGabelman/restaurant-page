@@ -1,6 +1,7 @@
 import './style.css';
 import { populateHome } from './home';
 import { populateMenu } from './menu';
+import { populateAbout } from './about';
 
 class navController {
 
@@ -14,19 +15,17 @@ class navController {
   initializeEventHandlers() {
     this.home.addEventListener("click", () => {
       this.clearContent();
-      console.log("home button pressed");
       populateHome();
     });
 
     this.menu.addEventListener("click", () => {
       this.clearContent();
-      console.log("menu button pressed");
       populateMenu();
     });
 
     this.about.addEventListener("click", () => {
       this.clearContent();
-      console.log("about button pressed");
+      populateAbout();
     });
   }
 
